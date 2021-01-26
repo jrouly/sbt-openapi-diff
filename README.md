@@ -14,28 +14,47 @@ Add to your `project/plugins.sbt`:
 addSbtPlugin("org.openapitools" % "sbt-openapi-diff" % "version")
 ```
 
-# Configuration
-
-TBD
-
-# Execution
-
-```shell script
-sbt openApiDiff
+Update your `build.sbt`:
+```sbt
+enablePlugins(OpenApiDiffPlugin)
+openApiDiffFiles := (file("openapi.v1.yaml"), file("openapi.v2.yaml"))
 ```
 
-# Settings
+Invoke one of the provided tasks:
+```sbt
+> openApiDiff         # computes the raw diff
+> openApiDiffRender   # renders the diff
+```
 
-| Setting | Type | Description |
+##### Changing the renderer
+
+You can change how the diff is rendered by setting `openApiDiffRenderer`:
+```sbt
+import org.openapitools.openapidiff.core.output._
+openApiDiffRenderer := new MarkdownRender()
+openApiDiffRenderer := new HtmlRender()
+openApiDiffRenderer := new ConsoleRender()
+```
+
+##### Extensions
+
+See the [openapi-diff](https://github.com/OpenAPITools/openapi-diff#extensions) documentation for details on writing diff extensions.
+
+# sbt keys
+
+| Key | Type | Description |
 | ------- | ---- | ----------- |
-| tbd | tbd | tbd |
+| `openApiDiff` | `TaskKey[ChangedOpenApi]` | Returns the diff between two OpenAPI specifications. |
+| `openApiDiffRender` | `TaskKey[String]` | Returns the rendered diff between two OpenAPI specifications. |
+| `openApiDiffFiles` | `TaskKey[(sbt.File, sbt.File)]` | OpenAPI specification files to diff. |
+| `openApiDiffRenderer` | `SettingKey[Render]` | OpenAPI specification diff renderer. |
 
 # Examples
 
 Please see [an sbt-test configuration](src/sbt-test) for examples of using the plugin.
 Do not run those examples directly, please copy them to separate place first.
 
-# Contribution and Tests
+# Contribution and testing
 
 Write plugin integration tests under [src/sbt-test](src/sbt-test)
 

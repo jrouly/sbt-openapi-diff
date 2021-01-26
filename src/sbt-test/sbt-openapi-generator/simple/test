@@ -2,7 +2,11 @@
 > clean
 > compile
 
+# verify aggregation doesn't break
 > openApiDiff
 
 > same/check
+$ exists same.diff
+
 > incompatible/check
+$ exists incompatible.diff
