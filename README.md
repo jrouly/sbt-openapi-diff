@@ -44,10 +44,10 @@ See the [openapi-diff](https://github.com/OpenAPITools/openapi-diff#extensions) 
 
 | Key | Type | Description |
 | ------- | ---- | ----------- |
-| `openApiDiff` | `TaskKey[ChangedOpenApi]` | Returns the diff between two OpenAPI specifications. |
-| `openApiDiffRender` | `TaskKey[String]` | Returns the rendered diff between two OpenAPI specifications. |
 | `openApiDiffFiles` | `TaskKey[(sbt.File, sbt.File)]` | OpenAPI specification files to diff. |
+| `openApiDiff` | `TaskKey[ChangedOpenApi]` | Returns the diff between two OpenAPI specifications. |
 | `openApiDiffRenderer` | `SettingKey[Render]` | OpenAPI specification diff renderer. |
+| `openApiDiffRender` | `TaskKey[String]` | Returns the rendered diff between two OpenAPI specifications. |
 
 # Examples
 

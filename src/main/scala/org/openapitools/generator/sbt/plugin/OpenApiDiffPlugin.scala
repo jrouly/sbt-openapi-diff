@@ -19,7 +19,7 @@ package org.openapitools.generator.sbt.plugin
 
 import org.openapitools.openapidiff.core.OpenApiCompare
 import org.openapitools.openapidiff.core.output.MarkdownRender
-import sbt.Def
+import sbt._
 import sbt.plugins.JvmPlugin
 
 object OpenApiDiffPlugin extends sbt.AutoPlugin with OpenApiDiffKeys {
@@ -35,14 +35,14 @@ object OpenApiDiffPlugin extends sbt.AutoPlugin with OpenApiDiffKeys {
     openApiDiffFiles := {
       sys.error("openApiDiffFiles is undefined. Did you forget to set it?")
     },
-    openApiDiffRenderer := new MarkdownRender(),
     openApiDiff := {
       val (doc1, doc2) = openApiDiffFiles.value
       OpenApiCompare.fromFiles(doc1, doc2)
     },
+    openApiDiffRenderer := new MarkdownRender(),
     openApiDiffRender := {
-      val renderer = openApiDiffRenderer.value
       val diff = openApiDiff.value
+      val renderer = openApiDiffRenderer.value
       renderer.render(diff)
     }
   )
