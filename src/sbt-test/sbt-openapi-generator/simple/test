@@ -1,0 +1,8 @@
+> reload
+> clean
+> compile
+
+> openApiDiff
+
+> same/check
+> incompatible/check
