@@ -21,12 +21,12 @@ openApiDiffFiles := (file("openapi.v1.yaml"), file("openapi.v2.yaml"))
 ```
 
 Invoke one of the provided tasks:
-```sbt
-> openApiDiff         # computes the raw diff
-> openApiDiffRender   # renders the diff
+```
+> openApiDiff
+> openApiDiffRender
 ```
 
-##### Changing the renderer
+#### Changing the renderer
 
 You can change how the diff is rendered by setting `openApiDiffRenderer`:
 ```sbt
@@ -36,7 +36,7 @@ openApiDiffRenderer := new HtmlRender()
 openApiDiffRenderer := new ConsoleRender()
 ```
 
-##### Extensions
+#### Extensions
 
 See the [openapi-diff](https://github.com/OpenAPITools/openapi-diff#extensions) documentation for details on writing diff extensions.
 
