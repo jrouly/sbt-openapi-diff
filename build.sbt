@@ -4,7 +4,7 @@ description := "Supports functionality from openapi-diff as part of an sbt build
 
 licenses += ("The Apache Software License, Version 2.0", url("https://www.apache.org/licenses/LICENSE-2.0.txt"))
 
-homepage := Some(url("https://openapi-generator.tech"))
+homepage := Some(url("https://github.com/jrouly/sbt-openapi-diff"))
 
 developers += Developer(
   id = "jrouly",

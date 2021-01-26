@@ -11,7 +11,7 @@ An sbt plugin to support the [OpenAPI Diff](https://github.com/OpenAPITools/open
 Add to your `project/plugins.sbt`:
 
 ```sbt
-addSbtPlugin("org.openapitools" % "sbt-openapi-diff" % "version")
+addSbtPlugin("org.openapitools.openapidiff" % "sbt-openapi-diff" % "version")
 ```
 
 Update your `build.sbt`:
@@ -56,7 +56,7 @@ Do not run those examples directly, please copy them to separate place first.
 
 # Contribution and testing
 
-Write plugin integration tests under [src/sbt-test](src/sbt-test)
+Write plugin integration tests under [src/sbt-test](src/sbt-test).
 
 Execute next command to run tests:
 
@@ -64,4 +64,8 @@ Execute next command to run tests:
 sbt scripted
 ```
 
-More information about how to write and execute tests [is here](https://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html)
+More information about how to write and execute tests [is here](https://www.scala-sbt.org/1.x/docs/Testing-sbt-plugins.html).
+
+# Credits
+
+Based heavily on [sbt-openapi-generator](https://github.com/OpenAPITools/sbt-openapi-generator).
