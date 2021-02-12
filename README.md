@@ -1,4 +1,4 @@
-# sbt-openapi-generator
+# sbt-openapi-diff
 
 [![Scala CI](https://github.com/jrouly/sbt-openapi-diff/workflows/Scala%20CI/badge.svg?branch=master)](https://github.com/jrouly/sbt-openapi-diff/actions?query=workflow%3A%22Scala+CI%22)
 [![Download](https://api.bintray.com/packages/jrouly/sbt-plugins/sbt-openapi-diff/images/download.svg)](https://bintray.com/jrouly/sbt-plugins/sbt-openapi-diff/_latestVersion)
