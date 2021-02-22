@@ -11,6 +11,7 @@ An sbt plugin to support the [OpenAPI Diff](https://github.com/OpenAPITools/open
 Add to your `project/plugins.sbt`:
 
 ```sbt
+resolvers += Resolver.bintrayIvyRepo("jrouly", "sbt-plugins")
 addSbtPlugin("org.openapitools.openapidiff" % "sbt-openapi-diff" % "version")
 ```
 
