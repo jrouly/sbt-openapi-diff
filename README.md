@@ -1,8 +1,6 @@
 # sbt-openapi-diff
 
 [![Scala CI](https://github.com/jrouly/sbt-openapi-diff/workflows/Scala%20CI/badge.svg?branch=master)](https://github.com/jrouly/sbt-openapi-diff/actions?query=workflow%3A%22Scala+CI%22)
-[![Download](https://api.bintray.com/packages/jrouly/sbt-plugins/sbt-openapi-diff/images/download.svg)](https://bintray.com/jrouly/sbt-plugins/sbt-openapi-diff/_latestVersion)
-
 
 An sbt plugin to support the [OpenAPI Diff](https://github.com/OpenAPITools/openapi-diff) project.
 
@@ -11,8 +9,7 @@ An sbt plugin to support the [OpenAPI Diff](https://github.com/OpenAPITools/open
 Add to your `project/plugins.sbt`:
 
 ```sbt
-resolvers += Resolver.bintrayIvyRepo("jrouly", "sbt-plugins")
-addSbtPlugin("org.openapitools.openapidiff" % "sbt-openapi-diff" % "version")
+addSbtPlugin("net.rouly" % "sbt-openapi-diff" % "version")
 ```
 
 Update your `build.sbt`:
