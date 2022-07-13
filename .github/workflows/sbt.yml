@@ -7,12 +7,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: olafurpg/setup-scala@v10
         with:
           java-version: "adopt@1.8"
       - uses: coursier/cache-action@v5
-      - uses: jrouly/scalafmt-native-action@v1
+      - uses: jrouly/scalafmt-native-action@v2
+        with:
+          version: 2.7.5
       - run: csbt +test +scripted
 
   release:
