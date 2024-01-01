@@ -12,7 +12,7 @@ jobs:
         with:
           java-version: "adopt@1.8"
       - uses: coursier/cache-action@v5
-      - uses: jrouly/scalafmt-native-action@v2
+      - uses: jrouly/scalafmt-native-action@v3
         with:
           version: 2.7.5
       - run: csbt +test +scripted
